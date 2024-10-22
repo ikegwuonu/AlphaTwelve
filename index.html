@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="logo"><img src="images/Logo.svg" alt="icon" /></div>
+        <ul class="nav-links">
+          <li class="active">
+            <a href="#" class="go">
+              <img src="images/Vector.svg" alt="icon" />
+              <p class="go">Home</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="go">
+              <img src="images/solar_calendar-linear.svg" alt="icon" />
+              <p >Events</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="go">
+              <img src="images/Group.svg" alt="icon" />
+              <p class="go">Speaker</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="go">
+              <img src="images/Group2.svg" alt="icon" />
+              <p class="go">Reports</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="go">
+              <img src="images/bell (1).svg" alt="icon" />
+              <p class="go">Notifications</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="go">
+              <img src="images/double-chat-bubble.svg" alt="icon" />
+              <p class="go">Messages</p>
+            </a>
+          </li>
+          <li class="" id="collapse">
+            <a href="#" class="go">
+              <img src="images/double-chevron-left.svg" alt="icon" />
+              <p  >Collapse</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="go" id="darkModeToggle">
+              <img src="images/Base Switch.svg" alt="icon" />
+              <p >Dark mode</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="go">
+              <img src="images/Avatar.svg" alt="icon" />
+              <div >
+                <p>Rudra devi</p>
+                <p>redra.devi@gmail.com</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+        
+      </nav>
+
+      <main class="main-content">
+        <header>
+          <p>Welcome! Here’s your summary</p>
+         
+        </header>
+        <div class="overview-cards">
+          <div class="card">
+            <p class="title">Total Events:</p>
+            <div>
+              <span id="totalEvents">100,000</span>
+              <img src="images/arrow-up-right.svg" alt="arrow" />
+              <p class="green">+5.0%</p>
+            </div>
+          </div>
+          <div class="card">
+            <p class="title">Active Speakers:</p>
+            <div>
+              <span id="totalEvents">25</span>
+              <img src="images/arrow-down-right.svg" alt="arrow" />
+              <p class="red">-5.0%</p>
+            </div>
+          </div>
+          <div class="card">
+            <p class="title">Total Registration:</p>
+            <div>
+              <span id="totalEvents">300</span>
+              <img src="images/arrow-up-right.svg" alt="arrow" />
+              <p class="green">+5.0%</p>
+            </div>
+          </div>
+          <div class="card">
+            <p class="title">Total Revenue:</p>
+            <div>
+              <span id="totalEvents">$500,000</span>
+              <img src="images/arrow-up-right.svg" alt="arrow" />
+              <p class="green">+5.0%</p>
+            </div>
+          </div>
+          <!-- <div class="card">Active Speakers: <span id="activeSpeakers">25</span></div>
+                <div class="card">Total Registrations: <span id="totalRegistrations">300</span></div>
+                <div class="card">Total Revenue: <span id="totalRevenue">$500,000</span></div> -->
+        </div>
+
+        <p>Event Registration per month</p>
+        <div class="graph">
+          <canvas id="eventChart" class="chart"></canvas>
+          <div class="carousel box">
+            <!-- <p class="textstitle"> </p>
+                    <p class="textsdesc"> </p> -->
+            <div class="carousel-inner">
+              <p class="textstitle"></p>
+              <p class="textsdesc"></p>
+              <!-- <div class="carousel-item">News Item 2</div>
+                    <div class="carousel-item">News Item 3</div> -->
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+            <p>Events History</p>
+            <div class=" wrap">
+                <div class="flex">
+                    <form action="" class="flex pad">
+                        <img src="images/search.svg" alt="icon">
+                        <input type="text" placeholder="Search">
+                        
+                    </form>
+                    <div class="flex pad">
+                        <p>Date</p>
+                        <img src="images/chevron-down.svg" alt="icon">
+                    </div>
+                    <div class="flex pad">
+                        <p>Status</p>
+                        <img src="images/chevron-down.svg" alt="icon">
+                    </div>
+                    <div class="flex pad">
+                        <p>Name</p>
+                        <img src="images/chevron-down.svg" alt="icon">
+                    </div>
+                    <p>Displaying 100 results</p>
+                </div>
+                <div class="flex">
+                    <p>Sort</p>
+                <div class="flex pad">
+                    <p>Most Recent</p>
+                    <img src="images/chevron-down.svg" alt="icon">
+                </div>
+                <img src="images/double-chat-bubble.svg" alt="icon">
+                <div class="flex pad">
+                    
+                    <img src="images/download.svg" alt="icon">
+                    <p>Export</p>
+                </div>
+                </div>
+
+            </div>
+            <div class="table-head">
+                <p>Event Name</p>
+                <p>Date</p>
+                <p>Speaker</p>
+                <p>Status</p>
+
+            </div>
+            <div class="data"></div>
+           
+        </div>
+
+
+        <!-- <table id="eventsTable">
+          <thead>
+            <tr>
+              <th>Event Name</th>
+              <th>Date</th>
+              <th>Speaker</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              onclick="openModal('Cloud Innovation Summit', '2024-10-15', 'Jane Doe', 'Completed')"
+            >
+              <td>Cloud Innovation Summit</td>
+              <td>2024-10-15</td>
+              <td>Jane Doe</td>
+              <td>Completed</td>
+            </tr>
+             Additional rows here 
+          </tbody>
+        </table> -->
+      </main>
+    </div>
+
+    <div id="eventModal" class="modal">
+      <div class="modal-content">
+        <div>
+            <div class="flexx">
+                <p class="name">Event Name: </p><span id="modalEventName" style="font-size: 0.75rem;"></span>
+                <img src="images/Icon Button.svg" class="close" onclick="closeModal()">
+            </div>
+            <p class="date">Event Date:</p><span style="font-size: 0.75rem;" id="modalEventDate"></span>
+           <p class="desc" style="padding: 1.5rem 0;">Event Description: <span style="font-size: 0.75rem;" id="modalEventStatus"></span></p>
+           <img src="images/Avatar Group.png" alt="icon" style="padding: 1.5rem 0rem;">
+           <p class="desc">3 Guest Speaker</p>
+           <p class="desc" >300 Attendees</p>
+           
+            <!-- <p><strong>Speaker:</strong> <span id="modalEventSpeaker"></span></p>
+            <p><strong>Status:</strong> <span id="modalEventStatus"></span></p>
+            <p><strong>Description:</strong> Event description goes here.</p> -->
+        </div>
+        <div class="flexx modalbottom">
+            <button type="button" class="edit">Edit</button>
+            <div style="gap: 0.5rem;">
+                <button type="button" class="delete">Delete</button>
+                <button type="button " class="mark">Mark as Complete</button>
+            </div>
+           </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dummy.js"></script>
+  </body>
+</html>

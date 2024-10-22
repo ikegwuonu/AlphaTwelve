@@ -1,0 +1,403 @@
+:root{
+    --border:#f1f5f9;
+    --purple:#8576FF;
+    --lightpurple:#e2e8f0;
+    --gray:#f2f2f7;
+    --green:#10B981;
+    --darkgrey:#64748B;
+    --darkgrey1:#334155;
+    --red:#F43F5E;
+    --border2:#f0f0f0;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    width: fit-content;
+}
+.red{
+    color: var(--red);
+}
+.green{
+    color: var(--green);
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    display: flex;
+   
+}
+
+.sidebar {
+    width: fit-content;
+    background-color: #fff;
+    transition: width 0.3s;
+    padding: 0.5rem;
+    border-left: 0.0625rem solid var(--border);
+    
+}
+
+.sidebar.collapsed {
+    width: 3.75rem;
+}
+.logo{
+    padding: 0.5rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0 0.5rem;
+    
+}
+.nav-links li a{
+    display: flex;
+    gap: 1rem;
+
+    
+}
+.nav-links li:hover{
+    background-color: var(--border2);
+}
+.active{
+    color: var(--purple);
+    background-color: var(--lightpurple);
+    border-radius: 0.125rem;
+}
+.nav-links li a img{
+    
+}
+
+.main-content {
+    flex: 1;
+    padding: 2.5rem 1.75rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.25rem;
+}
+
+.overview-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.card {
+    flex:1;
+    background-color: #fff;
+    padding: 1rem;
+    flex: 1;
+    border-radius: 0.125rem;
+    transition: transform 0.3s;
+    border: 0.0625rem solid var(--lightpurple);
+}
+.card>.title{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: var(--darkgrey);
+}
+.card div{
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+
+}
+.card div p{
+    font-weight: 600;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+}
+.card div span{
+    color: var(--darkgrey1);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.graph{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.chart {
+    width: 31.25rem;
+    
+    height: 30rem;
+}
+
+.carousel {
+    
+    
+    flex:1;
+   position: relative;
+    align-items: center;
+    margin: 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: fit-content;
+    background-position: center;
+    transition: all 1s ease-in-out ;
+}
+.carousel-inner {
+    overflow: hidden;
+   bottom: 0.125rem;
+   padding: 0.625rem;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-self: baseline;
+    position: absolute;
+}
+
+.carousel-inner p {
+    min-width: 100%;
+    transition: all 1s ease-in;
+    color: #fff;
+    
+    font-size: 0.75rem;
+   
+}
+.prev, .next {
+    cursor: pointer;
+   position: absolute;
+   top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: var(--darkgrey1);
+    border: none;
+    padding: 0.625rem;
+    font-size: 0.75rem;
+    border-radius: 55%;
+}
+
+.prev {
+    left: 0.625rem;
+}
+
+.next {
+    right: 0.625rem;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+.pad{
+    padding: 0 1rem;
+    border:0.0625rem solid var(--border2);
+    border-radius: 0.125rem;
+   
+}
+.pad img{
+    cursor: pointer;
+}
+input{
+    background: inherit;
+    border: none;
+    padding: 0.9rem;
+}
+.table-head{
+    display: flex;align-items: center;
+    font-size: 0.875rem;
+    font-weight: 16;
+    background-color: var(--border);
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.125rem;
+    flex-wrap: wrap;
+}
+.table-head p{
+    flex: 1;
+
+}
+.table-head p:last-child{
+    text-align: center;
+
+}
+.wrap{
+    display: flex;
+    align-items: center;gap: 6px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 0.3125rem;
+}
+.row:hover{
+    background-color: var(--border);
+}
+.row p{
+    flex: 1;
+    font-size: 0.875rem;
+}
+.row p:last-child{
+    padding: 0.4rem;
+    border-radius: 2.5rem;
+    color: var(--purple);
+    border: 0.0625rem solid var(--purple);
+    background-color: var(--border2);
+   text-align: center;
+    font-size: 0.75rem;
+    
+}
+.Completed{
+    color: var(--green) !important;
+    border:0.0625rem solid var(--green) !important;
+    
+}
+.disappear>:last-child{
+    display: none;
+}
+.disappear{
+    width: fit-content;
+    padding: 1rem;
+}
+.disappear img{
+    width: 1.5625rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: 5% auto;
+    border: 0.0625rem solid #888;
+    width: fit-content;
+}
+.modal-content>div{
+    padding: 1.5rem;
+}
+.modalbottom{
+    background-color: var(--border2);
+    gap: 5rem;
+}
+.but{
+    
+}
+.edit,.delete,.mark{
+    padding: 0.5rem 1.125rem;
+    border: none;
+    border-radius: 0.125rem;
+}
+.edit{
+    background-color: #fff;
+    color: var(--darkgrey1);
+    
+}
+.delete{
+    background-color: var(--red);
+    color: #fff;
+}
+.mark{
+    background-color: var(--purple);
+    color: #fff;
+}
+.flexx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.name{
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--darkgrey1);
+}
+.date{
+    color: var(--darkgrey);
+    font-size: 0.875rem;
+}
+.desc{
+    color: var(--darkgrey);
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode .sidebar {
+    background-color: #484554;
+}
+
+.dark-mode .card {
+    background-color: #484554;
+}
+@media(max-width:1200px){
+    .sidebar{
+       transform:translateX( -100%) ;
+       display: none;
+    }
+    .main-content{
+       overflow: hidden;
+    }
+    .graph{
+        
+    }
+    
+    .wrap{
+        flex-direction: column;
+        
+    }
+}
+@media(max-width:900px){
+    .graph{
+        grid-template-columns: 1fr;
+    }
+    .carousel{
+        height: 30rem;
+    }
+}
