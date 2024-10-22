@@ -1,0 +1,12 @@
+{
+  "name": "alphatwelve",
+  "version": "1.0.0",
+  "description": "Event Dashboard\r The Event Dashboard is a web-based application that provides a summary of event-related data, such as total events, active speakers, total registrations, and revenue. The dashboard also allows users to view events history, filter through events, and see detailed event information through a modal pop-up. The dashboard includes charts and tables to display data visually, making it easy to understand event performance.",
+  "main": "dummy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
