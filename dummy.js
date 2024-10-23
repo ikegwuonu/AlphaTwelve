@@ -1,4 +1,4 @@
-const eventsData = [
+const mainData = [
     { eventName: "Cloud Innovation Summit", date: "2024-10-15", speaker: "Jane Doe", status: "Completed" },
     { eventName: "Blockchain Revolution Conference", date: "2024-11-05", speaker: "Dr. Peter Smith", status: "In Progress" },
     { eventName: "AI in Healthcare Symposium", date: "2024-12-01", speaker: "Dr. Aisha Malik", status: "Completed" },
@@ -66,8 +66,11 @@ function closeModal() {
     modal.style.display = "none";}
 }
 
-// Loop through the eventsData array
+function myFunction(eventsData){
+    data.textContent="";
+    // Loop through the eventsData array
 for (let i = 0; i < 10; i++) {
+    
     const event = eventsData[i]; // Get the current event object
 
     // Create a new div for each event
@@ -95,8 +98,52 @@ for (let i = 0; i < 10; i++) {
     div.appendChild(p4);
 
     // Append the div to the data container
+    
     data.appendChild(div);
 
     // Add event listener for the modal to open on click
     div.addEventListener('click', () => openModal(event.eventName, event.date, event.speaker, event.status));
-}
+};
+};
+
+const sortDate=document.querySelector('.sortDate');
+
+sortDate.addEventListener('click',()=>{
+    
+   var eventsData=mainData.sort((a,b)=>new Date(a.date)-new Date(b.date));
+   return myFunction(eventsData);
+});
+const sortDate1=document.querySelector('.sortDate1');
+
+sortDate1.addEventListener('click',()=>{
+    
+   var eventsData=mainData.sort((a,b)=>new Date(b.date)-new Date(a.date));
+   return myFunction(eventsData);
+});
+const sortStatus=document.getElementById('sortStatus');
+
+sortStatus.addEventListener('click',()=>{
+    
+    var eventsData= mainData.sort((a,b)=>a.status.localeCompare(b.status));
+    return myFunction(eventsData);
+    console.log('out');
+});
+const sortName=document.getElementById('sortName');
+
+sortName.addEventListener('click',()=>{
+    var eventsData=mainData.sort((a,b)=>a.eventName.localeCompare(b.eventName));
+    return myFunction(eventsData);
+});
+formsubmit=document.getElementById('formsubmit');
+formsubmit.addEventListener('submit',function (event){
+    event.preventDefault();
+    const input=document.getElementById('input').value.toLowerCase();
+   var eventsData=mainData.filter((item)=>item.eventName.toLowerCase().includes(input));
+   return myFunction(eventsData);
+
+})
+// function fiiter(){
+//     const input=document.getElementById('input').value;
+//    var eventsData=mainData.filter((item)=>item.eventName==input);
+//    return myFunction(eventsData);
+// };

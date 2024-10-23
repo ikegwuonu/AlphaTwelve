@@ -6,9 +6,10 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
    
   </head>
-  <body>
+  <body onload="myFunction(mainData)">
     <div class="container">
       <nav class="sidebar">
         <div class="logo"><img src="images/Logo.svg" alt="icon" /></div>
@@ -39,7 +40,7 @@
           </li>
           <li class="">
             <a href="#" class="go">
-              <img src="images/bell (1).svg" alt="icon" />
+              <img src="images/Nav Item.svg" alt="icon" />
               <p class="go">Notifications</p>
             </a>
           </li>
@@ -78,6 +79,7 @@
       <main class="main-content">
         <header>
           <p>Welcome! Here’s your summary</p>
+          <img class="none" src="images/solar_hamburger-menu-broken.svg" alt="icon">
          
         </header>
         <div class="overview-cards">
@@ -139,20 +141,20 @@
             <p>Events History</p>
             <div class=" wrap">
                 <div class="flex">
-                    <form action="" class="flex pad">
-                        <img src="images/search.svg" alt="icon">
-                        <input type="text" placeholder="Search">
+                    <form action="" id="formsubmit" class="flex pad">
+                        <button type="submit"><img src="images/search.svg" alt="icon" ></button>
+                        <input type="text" placeholder="Search" id="input">
                         
                     </form>
-                    <div class="flex pad">
+                    <div class="flex pad sortDate">
                         <p>Date</p>
                         <img src="images/chevron-down.svg" alt="icon">
                     </div>
-                    <div class="flex pad">
+                    <div class="flex pad" id="sortStatus">
                         <p>Status</p>
                         <img src="images/chevron-down.svg" alt="icon">
                     </div>
-                    <div class="flex pad">
+                    <div class="flex pad" id="sortName">
                         <p>Name</p>
                         <img src="images/chevron-down.svg" alt="icon">
                     </div>
@@ -160,11 +162,11 @@
                 </div>
                 <div class="flex">
                     <p>Sort</p>
-                <div class="flex pad">
+                <div class="flex pad sortDate1">
                     <p>Most Recent</p>
                     <img src="images/chevron-down.svg" alt="icon">
                 </div>
-                <img src="images/double-chat-bubble.svg" alt="icon">
+                <img src="images/Status Dot.svg" alt="icon">
                 <div class="flex pad">
                     
                     <img src="images/download.svg" alt="icon">
@@ -182,6 +184,20 @@
             </div>
             <div class="data"></div>
            
+            <div class="pagination">
+                <div >
+                    <p class="pad" style="padding: 0.5rem;"><</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p class="pad" style="padding: 0.5rem;">></p>
+                </div>
+                <div class="pad flex">
+                    <p>Sort 10</p>
+                    <img src="images/double-chevron-left.svg" alt="">
+
+                </div>
+            </div>
         </div>
 
 

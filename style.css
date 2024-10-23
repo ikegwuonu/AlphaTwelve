@@ -32,16 +32,17 @@ body {
 
 .container {
     display: flex;
-   
+   position: relative;
 }
 
 .sidebar {
-    width: fit-content;
+    
     background-color: #fff;
     transition: width 0.3s;
     padding: 0.5rem;
     border-left: 0.0625rem solid var(--border);
     
+    height: 100%;
 }
 
 .sidebar.collapsed {
@@ -58,7 +59,7 @@ body {
 
 .nav-links li {
     margin: 0;
-    padding: 0 0.5rem;
+    padding:  0.5rem;
     
 }
 .nav-links li a{
@@ -214,6 +215,10 @@ header {
     border-radius: 0.125rem;
    
 }
+.pad:hover{
+    background-color:var(--border2);
+    cursor: pointer;
+}
 .pad img{
     cursor: pointer;
 }
@@ -221,6 +226,7 @@ input{
     background: inherit;
     border: none;
     padding: 0.9rem;
+    outline: none;
 }
 .table-head{
     display: flex;align-items: center;
@@ -244,6 +250,17 @@ input{
 .wrap{
     display: flex;
     align-items: center;gap: 6px;
+    flex-wrap: wrap;
+}
+.wrap>:first-child{
+    flex-wrap: wrap;
+}
+.data{
+    transition: all ease-in-out 2s;
+}
+form button{
+    border: none;
+    background-color: inherit;
 }
 .row{
     display: flex;
@@ -251,6 +268,7 @@ input{
     justify-content: space-between;
     cursor: pointer;
     padding: 0 0.3125rem;
+    transition: transform 0.6s;
 }
 .row:hover{
     background-color: var(--border);
@@ -274,12 +292,15 @@ input{
     border:0.0625rem solid var(--green) !important;
     
 }
+.none{
+    display: none;
+}
 .disappear>:last-child{
     display: none;
 }
 .disappear{
     width: fit-content;
-    padding: 1rem;
+   padding: 0.5rem;
 }
 .disappear img{
     width: 1.5625rem;
@@ -363,6 +384,18 @@ input{
     cursor: pointer;
 }
 
+.pagination{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pagination div{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 /* Dark Mode */
 .dark-mode {
     background-color: #1e1e1e;
@@ -378,26 +411,41 @@ input{
 }
 @media(max-width:1200px){
     .sidebar{
-       transform:translateX( -100%) ;
+       /* transform:translateX( -100%) ; */
+       
+       
+       top: 0px;
+       left: 0px;
        display: none;
+    }
+     .show{
+        display: block !important;
+        transition: transform  3s;
     }
     .main-content{
        overflow: hidden;
     }
-    .graph{
-        
+    .none{
+        display: block;
+        cursor: pointer;
     }
     
-    .wrap{
-        flex-direction: column;
-        
-    }
+   
 }
+
 @media(max-width:900px){
     .graph{
         grid-template-columns: 1fr;
     }
     .carousel{
         height: 30rem;
+    }
+    
+}
+@media(max-width:500px){
+    .wrap>:first-child>.pad{
+        width: 100%;
+       
+        justify-content: center;
     }
 }

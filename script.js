@@ -7,8 +7,8 @@ const eventChart = new Chart(ctx, {
         datasets: [{
             label: 'Event Registrations per Month',
             data: [120, 150, 300, 200, 400, 450, 600, 700, 800, 900, 600, 300],
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            backgroundColor: '#8576FF',
+            borderColor: '#8576FF',
             borderWidth: 1,
            
         }]
@@ -18,7 +18,15 @@ const eventChart = new Chart(ctx, {
         maintainAspectRatio: false,
         scales: {
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                grid:{
+                    color:'white'
+                }
+            },
+            x:{
+                grid:{
+                    color:'white'
+                }
             }
         }
     }
@@ -117,3 +125,11 @@ document.getElementById("darkModeToggle").addEventListener("click", () => {
 //         closeModal();
 //     }
 // };
+const none=document.querySelector('.none');
+
+none.addEventListener('click',()=>{
+    const sidebar=document.querySelector('.sidebar');
+    sidebar.classList.toggle("show")
+   
+
+});
