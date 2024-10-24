@@ -19,17 +19,21 @@ Dark Mode: Implemented for theme toggling between light and dark modes.
 Installation and Setup
 Clone the Repository:
 
-
+bash
+Copy code
 git clone https://github.com/your-username/event-dashboard.git
 Open the Project Folder:
 
+bash
+Copy code
 cd event-dashboard
 Open the index.html File:
 
 Open index.html in your preferred browser to view the dashboard.
 
 File Structure
-
+graphql
+Copy code
 event-dashboard/
 │
 ├── index.html           # Main HTML file for the dashboard
