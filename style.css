@@ -433,8 +433,15 @@ form button{
 }
 .dark-mode .wrap{
     background-color: #484554;
-    padding: 0.5rem;
+    padding: 0.1rem;
     border-radius: 2px;
+}
+.dark-mode .wrap div,
+.dark-mode .wrap form{
+    border: none;
+}
+.dark-mode .wrap>div:hover{
+    color: var(--darkgrey1);
 }
 .dark-mode .data{
     background-color: #484554;
@@ -510,7 +517,7 @@ form button{
 }
 @media(max-width:500px){
     .wrap>:first-child>.pad{
-        width: 100%;
+        width: 80%;
        
         justify-content: center;
     }
