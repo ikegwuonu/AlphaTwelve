@@ -40,7 +40,8 @@ body {
 }
 
 .sidebar {
-    overflow: hidden;
+   
+    overflow-y: auto;
     z-index: 2;
     
     background-color: #fff;
